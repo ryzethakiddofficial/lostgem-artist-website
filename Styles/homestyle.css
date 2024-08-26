@@ -5,6 +5,7 @@ body {
     background-color: #f0f2f5;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Navigation Bar */
@@ -24,6 +25,7 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
+    width: 100%;
 }
 
 .navbar .logo {
@@ -110,6 +112,7 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
+    width: 100%;
 }
 
 .feature {
@@ -157,6 +160,7 @@ body {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    width: 100%;
 }
 
 .footer p {
@@ -180,27 +184,25 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    /* Adjust the feature container width for better layout on tablets and smaller screens */
     .features .container {
         flex-direction: column;
         align-items: center;
     }
 
     .feature {
-        width: 80%; /* Increase width to prevent button overlap */
+        width: 80%; /* Adjust width for tablets */
         margin-bottom: 20px;
     }
 
     .btn.primary-btn {
-        width: 90%; /* Adjust button width for better fit */
+        width: 90%; /* Adjust button width for tablets */
         text-align: center;
     }
 }
 
 @media (max-width: 480px) {
-    /* Further adjustments for smaller screens like phones */
     .feature {
-        width: 90%; /* Further increase width for smaller screens */
+        width: 90%; /* Further adjust width for phones */
     }
 
     .hero h1 {

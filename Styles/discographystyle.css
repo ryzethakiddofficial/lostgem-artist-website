@@ -5,6 +5,7 @@ body {
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Navigation Bar */
@@ -24,6 +25,7 @@ body {
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
+    width: 100%;
 }
 
 .navbar .logo {
@@ -87,17 +89,10 @@ body {
 .discography .container {
     max-width: 1200px;
     margin: auto;
+    width: 100%;
 }
 
 /* Release Sections */
-.release-section {
-    display: none;
-}
-
-.release-section.active {
-    display: block;
-}
-
 .release-item {
     display: flex;
     align-items: center;
@@ -164,6 +159,7 @@ body {
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    width: 100%;
 }
 
 .footer p {

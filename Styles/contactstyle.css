@@ -19,30 +19,35 @@ body {
     min-height: 100vh;
 }
 
-/* Navbar container */
+/* Navigation Bar */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
 .navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px; /* Added padding for better touch targets on mobile */
+    padding: 10px 20px; /* Adjusted padding for better alignment */
 }
 
-/* Navigation Bar Links */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    z-index: 100;
+.navbar .logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #512da8;
+    text-decoration: none;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
     margin: 0;
     padding: 0;
 }
@@ -54,7 +59,7 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #333;
-    padding: 10px 15px;
+    padding: 10px 15px; /* Consistent padding with other pages */
     font-weight: 500;
     transition: color 0.3s;
 }
