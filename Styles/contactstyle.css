@@ -1,41 +1,59 @@
 @import url('homestyle.css'); /* Import homestyle.css to inherit global styles */
 
-/* General Styles */
-* {
+/* Global Styles */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f0f2f5;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for dark mode */
 }
 
-body {
-    background-color: #c9d6ff;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-    margin: 0;
-    padding-top: 80px; /* Space for the fixed header */
+body.dark-mode {
+    background-color: #121212;
+    color: #e2e2e2;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    background: linear-gradient(to right, #1a1a1a, #121212); /* Dark gradient */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
 }
 
 /* Navigation Bar */
 .navbar {
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    padding: 15px 0;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 100;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Transition for navbar */
 }
 
-.navbar-container {
+body.dark-mode .navbar {
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px; /* Adjusted padding for better alignment */
+    margin: auto;
+    width: 100%;
 }
 
 .navbar .logo {
@@ -43,42 +61,81 @@ body {
     font-weight: 700;
     color: #512da8;
     text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
 }
 
-.nav-links {
-    list-style: none;
+body.dark-mode .navbar .logo {
+    color: #bb86fc;
+}
+
+.navbar .nav-links {
     display: flex;
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    margin-right: auto;
 }
 
-.nav-links li {
-    margin: 0;
+.navbar .nav-links li {
+    margin: 0 20px;
 }
 
-.nav-links a {
-    text-decoration: none;
+.navbar .nav-links a {
     color: #333;
-    padding: 10px 15px; /* Consistent padding with other pages */
+    text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Transition for link color */
+    padding: 10px; /* Added padding for better click area */
 }
 
-.nav-links a:hover {
+body.dark-mode .navbar .nav-links a {
+    color: #e2e2e2;
+}
+
+.navbar .nav-links a:hover {
     color: #512da8;
+}
+
+body.dark-mode .navbar .nav-links a:hover {
+    color: #bb86fc;
+}
+
+/* Dark Mode Button Alignment */
+.btn.btn-darkmode-btn {
+    margin-left: 20px;
+}
+
+.navbar .btn-darkmode-btn {
+    margin-left: 20px;
+}
+
+/* Dark Mode for Links */
+.nav-links a.dark-mode {
+    color: #e0e0e0; /* Light text color for dark mode */
+}
+
+/* Form Wrapper Styles */
+.form-wrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: calc(100vh - 80px); /* Full viewport height minus navbar height */
 }
 
 /* Contact Form Styles */
 .contact-container {
-    background-color: #fff;
+    background-color: #fff; /* Light background for form */
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     width: 500px;
     max-width: 90%; /* Ensures form does not exceed viewport width */
     padding: 30px;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px; /* Allow space for the footer */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.contact-container.dark-mode {
+    background-color: #2a2a2a; /* Dark background for form */
+    color: #e0e0e0; /* Light text color */
 }
 
 .contact-container h2 {
@@ -100,18 +157,25 @@ body {
 
 .contact-container input,
 .contact-container textarea {
-    background-color: #eee;
+    background-color: #eee; /* Light background for inputs */
     border: none;
     padding: 15px;
     font-size: 14px;
     border-radius: 8px;
     width: 100%;
     outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.contact-container input.dark-mode,
+.contact-container textarea.dark-mode {
+    background-color: #444; /* Dark background for inputs */
+    color: #e0e0e0; /* Light text color */
 }
 
 .contact-container button {
-    background-color: #512da8;
-    color: #fff;
+    background-color: #512da8; /* Button background */
+    color: #fff; /* Button text color */
     font-size: 14px;
     padding: 12px;
     border: none;
@@ -125,14 +189,25 @@ body {
     background-color: #5c6bc0;
 }
 
-/* Footer Styles */
+/* Dark Mode for Button */
+.contact-container button.dark-mode {
+    background-color: #673ab7; /* Darker button background */
+}
+
+/* Footer */
 .footer {
     background-color: #512da8;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
-    width: 100%; /* Make footer span full width */
-    margin-top: auto; /* Push footer to the bottom of the page */
+    position: fixed; /* Keep the footer at the bottom of the screen */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make footer span the full width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer p {
@@ -142,16 +217,27 @@ body {
 
 .footer .social-icons {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between the social icons */
 }
 
 .footer .social-icons .icon {
-    margin: 0 10px;
     color: #ffffff;
     transition: color 0.3s;
 }
 
 .footer .social-icons .icon:hover {
     color: #e2e2e2;
+}
+
+body.dark-mode .footer {
+    background-color: #1f1f1f;
+    color: #e2e2e2;
+}
+
+body.dark-mode .footer .social-icons .icon:hover {
+    color: #bb86fc;
 }
 
 /* Responsive Design for Mobile */
@@ -178,7 +264,7 @@ body {
     .contact-container {
         width: 100%; /* Ensure full width on small screens */
         padding: 20px; /* Reduced padding for smaller screens */
-        margin-top: 60px; /* More space from fixed header */
+        margin-top: 20px; /* More space from fixed header */
     }
 
     .contact-container input,
