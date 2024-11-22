@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="Styles/discographystyle.css">
+    <link rel="icon" href="Images/Profile.jpg" type="Images/x-icon">
+    <meta name="viewport" content="width=1200, initial-scale=1">
+    <title>Discography | LostGem</title>
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <header class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">LostGem</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="discography.html">Discography</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li>
+                            <button class="btn-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Discography Section -->
+        <section class="discography">
+            <div class="container">
+                <div class="discography-nav">
+                    <button class="nav-btn active" data-target="singles">Singles</button>
+                </div>
+
+                <!-- Singles -->
+            
+                <div id="singles" class="release-section active">
+                    <div class="release-item">
+                        <a href="Discography/Collabs/Perfect.html">
+                            <img src="Images/Discography/perfect.jpg" alt="Perfect">
+                            <div class="release-info">
+                                <h3>Perfect (with LostGem)</h3>
+                                <p class="release-date">Release Date: 27th September 2024</p>
+                                <p>A single I produced and also featured on with LostGem. It is LostGem's official debut single.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Ryze Collective Media Group 2024 | All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/lostgemofficial" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/lostgemofficial" class="icon"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/lostgemofficial" class="icon"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Scripts/darkmode.js"></script>
+    <script src="Scripts/discographyscript.js"></script>
+</body>
+</html>
