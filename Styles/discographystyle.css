@@ -1,124 +1,225 @@
 @import url(homestyle.css);
 
-/* Discography Navigation */
 .discography-nav {
-    display: flex; /* Flex layout for navigation */
-    justify-content: center; /* Center nav buttons */
-    margin-bottom: 40px; /* Margin below nav */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
 .nav-btn {
-    background: #512da8; /* Button background color */
-    color: #ffffff; /* Button text color */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Padding for button */
-    margin: 0 10px; /* Margin between buttons */
-    font-size: 16px; /* Button font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners for buttons */
-    transition: background-color 0.3s, transform 0.3s; /* Transition for button effects */
+  background: #512da8;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .nav-btn.active,
 .nav-btn:hover {
-    background-color: #3d1d6d; /* Button active/hover color */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: #3d1d6d;
+  transform: scale(1.05);
 }
 
-/* Discography Section */
 .discography {
-    padding: 60px 20px; /* Vertical padding for discography */
-    background-color: #ffffff; /* Discography background color */
+  padding: 60px 20px;
 }
 
 .discography .container {
-    max-width: 1200px; /* Max width for container */
-    margin: auto; /* Center the container */
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Release Sections */
 .release-section {
-    display: none; /* Initially hide all sections */
-    opacity: 0; /* Set initial opacity to 0 */
-    transition: opacity 0.5s ease; /* Transition for fade effect */
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .release-section.active {
-    display: block; /* Show the active section */
-    opacity: 1; /* Set opacity to 1 when active */
+  display: block;
+  opacity: 1;
 }
 
 .release-item {
-    display: flex; /* Flex layout for release items */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 30px; /* Margin below release items */
-    padding: 15px; /* Padding inside release items */
-    background: #f9f9f9; /* Default background for release items */
-    border-radius: 10px; /* Rounded corners for release items */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for release items */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
-    position: relative; /* Positioning context */
-    overflow: hidden; /* Ensure image and content stay within bounds */
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 30px;
+	padding: 15px;
+	background: #E2E2E2;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgb(0 0 0 / .1);
+	transition: transform 0.3s, box-shadow 0.3s;
+	position: relative;
+	overflow: hidden;
 }
 
 .release-item a {
-    display: flex; /* Flex layout for links */
-    align-items: center; /* Center items vertically */
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Ensure text color is inherited from parent */
-    width: 100%; /* Full width for link */
-    height: 100%; /* Full height for link */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
 }
 
 .release-item:hover {
-    transform: scale(1.05); /* Enlarge on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgb(0 0 0 / .2);
 }
 
 .release-item img {
-    width: 150px; /* Fixed width for images */
-    height: auto; /* Automatic height to maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for images */
-    margin-right: 20px; /* Space to the right of the image */
-    transition: transform 0.3s; /* Transition for image hover effect */
+	width: 180px;
+	height: auto;
+	border-radius: 8px;
+	margin-right: 20px; /* Space between the image and text */
+	transition: transform 0.3s;
 }
 
 .release-item:hover img {
-    transform: scale(1.05); /* Enlarge image on hover */
+  transform: scale(1.05);
 }
 
 .release-info {
-    max-width: 800px; /* Max width for release info */
+	max-width: 800px;
+	padding-left: 20px; /* Add padding to the left to space out text */
 }
 
 .release-info h3 {
-    font-size: 26px; /* Heading font size */
-    color: #333; /* Heading color */
-    margin-bottom: 10px; /* Space below heading */
+	font-size: 26px;
+	color: #333;
+	margin-bottom: 10px;
 }
 
 .release-info .release-date {
-    font-size: 16px; /* Release date font size */
-    color: #777; /* Release date color */
-    margin-bottom: 10px; /* Space below release date */
+	font-size: 16px;
+	color: #777;
+	margin-bottom: 10px;
 }
 
 .release-info p {
-    font-size: 16px; /* Paragraph font size */
-    color: #666; /* Paragraph color */
-}
-
-body.dark-mode .discography {
-    background-color: #121212; /* Dark mode discography background */
+	font-size: 16px;
+	color: #666;
+	line-height: 1.5;
 }
 
 body.dark-mode .release-item {
-    background: #1d1d1d; /* Dark mode release item background */
-    border-radius: 10px; /* Rounded corners for dark mode release items */
+	background: #000000;
+  border-radius: 10px;
 }
 
 body.dark-mode .release-info h3,
 body.dark-mode .release-info .release-date,
 body.dark-mode .release-info p {
-    color: #ffffff; /* Dark mode text color for release info */
+  color: #fff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .release-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px; /* Add padding to make the content less cramped */
+  }
+
+  .release-item img {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .release-info h3 {
+    font-size: 22px;
+  }
+
+  .release-info p {
+    font-size: 14px;
+  }
+
+  .release-info .release-date {
+    font-size: 14px;
+  }
+
+  .discography-nav {
+    flex-direction: row; /* Keep buttons in a horizontal row */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .release-item img {
+    width: 120px;
+    max-width: 100%;
+  }
+
+  .release-info h3 {
+    font-size: 20px;
+  }
+
+  .release-info p {
+    font-size: 14px;
+  }
+
+  .release-info .release-date {
+    font-size: 12px;
+  }
+
+  .discography-nav {
+    flex-direction: row; /* Keep buttons in a horizontal row */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-btn {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .release-info h3 {
+    font-size: 18px;
+  }
+
+  .release-info p {
+    font-size: 12px;
+  }
+
+  .release-info .release-date {
+    font-size: 10px;
+  }
+
+  .release-item img {
+    width: 100%;
+    max-width: 160px; /* More mobile-friendly image size */
+  }
+
+  .discography {
+    padding: 20px 15px; /* Reduce padding for better use of space */
+  }
+
+  .discography-nav {
+    flex-direction: row; /* Keep buttons in a horizontal row */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }

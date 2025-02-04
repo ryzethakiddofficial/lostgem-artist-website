@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="Styles/contactstyle.css">
     <link rel="icon" href="Images/Profile.jpg" type="Images/x-icon">
-    <meta name="viewport" content="width=1200, initial-scale=1">
     <title>Contact | LostGem</title>
 </head>
 
@@ -16,16 +14,16 @@
     <div class="content-wrapper">
         <header class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">LostGem</a>
+                <a href="index.html" class="logo">LostGem</a><span class="menu-btn" onclick="toggleMenu()"><i class="fa fa-bars"></i></span>
                 <nav>
                     <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="discography.html">Discography</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li>
-                            <button class="btn-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-                        </li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><button class="btn-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button></li>
+                        <li><button class="back-button" onclick="goBack()">Go Back</button></li>
                     </ul>
                 </nav>
             </div>
@@ -58,8 +56,6 @@
         </div>
     </footer>
 
-    <script src="Scripts/menu.js"></script>
-    <script src="Scripts/idle.js"></script>
-    <script src="Scripts/darkmode.js"></script>
+    <script src="Scripts/darkmode.js"></script><script src="Scripts/mobilemenu.js"></script><script src="Scripts/back.js"></script>
 </body>
 </html>

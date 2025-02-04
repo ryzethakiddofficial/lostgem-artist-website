@@ -3,12 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="Styles/aboutstyle.css">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <link rel="stylesheet" href="Styles/aboutstyle.css">
     <link rel="icon" href="Images/Profile.jpg" type="Images/x-icon">
-    <meta name="viewport" content="width=1200, initial-scale=1">
-
     <title>About Me | LostGem</title>
 </head>
 
@@ -16,47 +14,42 @@
     <div class="content-wrapper">
         <header class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">LostGem</a>
+                <a href="index.html" class="logo">LostGem</a><span class="menu-btn" onclick="toggleMenu()"><i class="fa fa-bars"></i></span>
                 <nav>
                     <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="discography.html">Discography</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li>
-                            <button class="btn-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-                        </li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><button class="btn-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button></li>
+                        <li><button class="back-button" onclick="goBack()">Go Back</button></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <!-- Main Content Section -->
-        <main class="main-content" role="main">
+        <section class="main-content">
             <div class="container">
-                <!-- Table of Contents Section (Aligned Right) -->
-                <aside class="toc-section" aria-label="Profile Information">
-                    <div class="profile-picture">
-                        <img src="Images/Profile.jpg" alt="Portrait of Ryze Tha Kidd" />
-                    </div>
-
+                <aside class="toc-section">
+                    <div class="profile-picture"><img src="Images/profile.jpg" alt="Portrait of Ryze Tha Kidd"></div>
                     <div class="profile-info">
-                        <h2>LostGem</h2>
-                        <p><strong>Occupation:</strong> Rapper, Singer/Songwriter</p>
-                        <p><strong>Born:</strong> September 27, 2003</p>
-                        <p><strong>Genres:</strong> Hip Hop, Emo Rap, Trap</p>
-                        <p><strong>Years Active:</strong> 2024-present</p>
-                        <p><strong>Label:</strong> Independent</p>
+                       <h2>LostGem</h2>
+                       <p><strong>Full Name:</strong>Sophie Christoforou</p>
+                       <p><strong>Occupation:</strong>Rapper, Singer/Songwriter</p>
+                       <p><strong>Born:</strong>27th September 2003</p>
+                       <p><strong>Genres:</strong>Hip Hop, Emo Rap, Trap</p>
+                       <p><strong>Years Active:</strong>2019-present</p>
+                       <p><strong>Label:</strong>Ryze Collective Media Group</p>
                     </div>
-                </aside>
-
-                <!-- About Me Section -->
-                <section class="about-section" aria-labelledby="about-me-heading">
-                    <h1 id="about-me-heading">About Me</h1>
-                    <p><strong>Sophie Christoforou</strong> (27th September, 2003), known professionally as <strong>LostGem</strong> is a British singer from Croydon, United Kingdom. Known for her distinct vocal style and emotive lyrics, LostGem began gaining attention in the UK music scene in early 2024. She released her debut single, "Perfect," on 27 September 2024, in collaboration with British rapper <a href="https://g.co/kgs/8mPzTNB" target="_blank"><strong>Ryze Tha Kidd</strong></a>. The single marked the beginning of her professional music career, showcasing her unique blend of Trap, Pop and R&B influences. LostGem continues to build her reputation as an emerging artist in the British music industry, captivating audiences with her soulful voice and compelling performances.</p>
+                 </aside>
+                <section class="about-section">
+                    <h1>About LostGem</h1>
+                    <p><strong>Sophie Christoforou</strong> (27th September, 2003), known professionally as <strong>LostGem</strong> is a British singer from Croydon, United Kingdom. Known for her distinct vocal style and emotive lyrics, LostGem began gaining attention in the UK music scene in early 2024. She released her debut single, "Perfect," on 27 September 2024, in collaboration with British rapper <a href="https://ryzethakiddofficial.github.io/ryzethakidd-artist-website/" target="_blank"><strong>Ryze Tha Kidd</strong></a>. The single marked the beginning of her professional music career, showcasing her unique blend of Trap, Pop and R&B influences. LostGem continues to build her reputation as an emerging artist in the British music industry, captivating audiences with her soulful voice and compelling performances.</p>
                 </section>
             </div>
-        </main>
+        </section>
         
     </div>
 
@@ -72,7 +65,8 @@
         </div>
     </footer>
 
-    <script src="Scripts/menu.js"></script>
+    <script src="Scripts/mobilemenu.js"></script>
     <script src="Scripts/darkmode.js"></script>
+    <script src="Scripts/back.js"></script>
 </body>
 </html>

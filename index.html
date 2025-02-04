@@ -3,41 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="Q2u-vjKw14WA-Kd6eGa8lVJbY822Q2Gda3y9--YjLxQ" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="Styles/homestyle.css">
-    <link rel="icon" href="Images/Profile.jpg" type="image/x-icon">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <link rel="stylesheet" href="Styles/homestyle.css">
+      <link rel="icon" href="Images/Profile.jpg" type="image/x-icon">
     <title>Home | LostGem</title>
 </head>
 
 <body>
-    <!-- Welcome Screen -->
     <div id="welcome-screen" class="welcome-screen">
         <div class="welcome-content">
-            <h1 id="welcome-message"></h1>
+           <h1 id="welcome-message"></h1>
         </div>
     </div>
-    
     <div class="content-wrapper">
         <header class="navbar">
             <div class="container">
-                <a href="index.html" class="logo">LostGem</a>
+                <a href="index.html" class="logo">LostGem</a><span class="menu-btn" onclick="toggleMenu()"><i class="fa fa-bars"></i></span>
                 <nav>
                     <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="discography.html">Discography</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li>
-                            <button class="btn-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-                        </li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><button class="btn-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button></li>
+                        <li><button class="back-button" onclick="goBack()">Go Back</button></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <!-- Hero Section -->
         <section class="hero">
             <div class="container">
                 <h1>Welcome to the Home of LostGem</h1>
@@ -45,35 +40,32 @@
                 <a href="about.html" class="btn">About Me</a>
             </div>
         </section>
-
-        <!-- Features Section -->
         <section class="features">
             <div class="container">
-                <!-- Feature 1: About Me -->
-                <div class="feature">
-                    <i class="fas fa-user"></i>
+               <div class="feature">
+                    <i class="fa-solid fa-address-card"></i>
                     <h3>About Me</h3>
-                    <p>I'm a British Singer-songwriter from <a href="https://en.wikipedia.org/wiki/Croydon">Croydon, UK</a>. My style is inspired by the late <a href="https://en.wikipedia.org/wiki/Juice_Wrld">Juice WRLD</a>.</p>
+                    <p>I'm a British Singer from<a href="https://en.wikipedia.org/wiki/Mossley">Croydon, UK</a>. Making music since 2019, my style is inspired by the late<a href="https://en.wikipedia.org/wiki/Juice_Wrld">Juice WRLD</a>.</p>
                     <a href="about.html" class="btn">About Me</a>
-                </div>
-
-                <!-- Feature 2: Discography -->
-                <div class="feature">
+               </div>
+               <div class="feature">
                     <i class="fas fa-music"></i>
                     <h3>Discography</h3>
                     <p>Check out my complete discography and download your favorite tracks directly to your device for free.</p>
                     <a href="discography.html" class="btn">View Discography</a>
-                </div>
-
-                <!-- Feature 3: Contact -->
-                <div class="feature">
-                    <i class="fas fa-phone"></i>
-                    <h3>Contact</h3>
-                    <p>Visit the contact page to contact me about bugs with the website, updates about the website, or updates my music.</p>
-                    <a href="contact.html" class="btn">Contact Me</a>
-                </div>
+               </div>
+               <div class="feature">
+                <i class="fa-solid fa-square-rss"></i>
+                <h3>Blog</h3>
+                <p>View my Blog for updates on my personal life, music, music videos, and so much more. I'll update it as frequently as I can.</p>
+                <a href="blog.html" class="btn">View Blog</a>
+               </div>
             </div>
         </section>
+        <div class="video-container">
+            <h2>New Video Out Now</h2>
+            <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/4v5eaxan39k?si=jVj0JPn-q0_FNxW_" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
     </div>
 
     <!-- Footer Section -->
@@ -88,8 +80,6 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="Scripts/welcome.js"></script>
-    <script src="Scripts/darkmode.js"></script>
+    <script src="Scripts/welcome.js"></script><script src="Scripts/darkmode.js"></script></script><script src="Scripts/mobilemenu.js"></script><script src="Scripts/back.js"></script>
 </body>
 </html>

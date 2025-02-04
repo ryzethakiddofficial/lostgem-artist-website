@@ -1,92 +1,126 @@
-@import url('homestyle.css');
+@import url(homestyle.css);
 
-/* Form Wrapper Styles */
 .form-wrapper {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: calc(100vh - 80px); /* Full viewport height minus navbar height */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 80px);
+	padding: 20px
 }
 
-/* Contact Form Styles */
 .contact-container {
-    background-color: #fff; /* Light background for form */
-    border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    width: 500px;
-    max-width: 90%; /* Ensures form does not exceed viewport width */
-    padding: 30px;
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 5px 25px rgb(0 0 0 / .1);
+	width: 100%;
+	max-width: 650px;
+	padding: 40px;
+	text-align: center;
+	transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease
 }
 
 .contact-container.dark-mode {
-    background-color: #2a2a2a; /* Dark background for form */
-    color: #e0e0e0; /* Light text color */
+	background: #000;
+	color: #e0e0e0;
+	box-shadow: 0 5px 25px rgb(0 0 0 / .3)
 }
 
 .contact-container h2 {
-    margin-bottom: 20px;
-    font-weight: 600;
-    color: #512da8;
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 20px;
+	color: #512da8
 }
 
 .contact-container p {
-    margin-bottom: 20px;
-    font-size: 16px;
+	font-size: 18px;
+	margin-bottom: 35px;
+	line-height: 1.5
 }
 
 .contact-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center; /* Center items horizontally */
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	align-items: center
 }
 
 .contact-container input,
 .contact-container textarea {
-    background-color: #eee; /* Light background for inputs */
-    border: none;
-    padding: 15px;
-    font-size: 14px;
-    border-radius: 5px; /* Less spherical edges */
-    width: 80%; /* Adjust width to center more */
-    outline: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	padding: 16px;
+	font-size: 15px;
+	border-radius: 10px;
+	width: 80%;
+	outline: none;
+	transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+	border-color: #512da8
 }
 
 .contact-container input.dark-mode,
 .contact-container textarea.dark-mode {
-    background-color: #444; /* Dark background for inputs */
-    color: #e0e0e0; /* Light text color */
+	background-color: #444;
+	color: #e0e0e0;
+	border-color: #555
 }
 
 .contact-container button {
-    background-color: #512da8; /* Button background */
-    color: #fff; /* Button text color */
-    font-size: 14px;
-    padding: 12px;
-    border: none;
-    border-radius: 5px; /* Less spherical edges */
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+	background-color: #512da8;
+	color: #fff;
+	font-size: 16px;
+	padding: 14px 24px;
+	border: none;
+	border-radius: 10px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease
 }
 
 .contact-container button:hover {
-    background-color: #5c6bc0;
+	background-color: #5c6bc0;
+	transform: translateY(-2px)
 }
 
-/* Dark Mode for Button */
 .contact-container button.dark-mode {
-    background-color: #673ab7; /* Darker button background */
+	background-color: #673ab7
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width:768px) {
+	.contact-container {
+		padding: 30px;
+		width: 90%
+	}
 
-    .contact-container {
-        width: 90%; /* Adjust width for smaller screens */
-        padding: 20px; /* Reduce padding */
-    }
+	.contact-container input,
+	.contact-container textarea {
+		width: 100%
+	}
+
+	.contact-container h2 {
+		font-size: 1.7rem
+	}
+
+	.contact-container p {
+		font-size: 16px
+	}
+}
+
+@media (max-width:480px) {
+	.contact-container h2 {
+		font-size: 1.5rem
+	}
+
+	.contact-container p {
+		font-size: 14px
+	}
+
+	.contact-container button {
+		font-size: 15px;
+		padding: 12px 20px
+	}
 }
